@@ -1,0 +1,14 @@
+# any png files
+*.png
+
+# any excel files
+*.xlsx
+
+# any csv files
+*.csv
+
+# any word files
+*.docx
+
+# any powerpoint files
+*.pptx
