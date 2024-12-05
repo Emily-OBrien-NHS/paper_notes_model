@@ -242,12 +242,3 @@ requests_pop = pd.DataFrame(Default_Params.population,
                                     + ['All', 'All Prop', 'Time', 'Day'])
 requests_pop.to_csv('Population.csv', index=False)
 Default_Params.results.to_csv('Results.csv')
-
-import matplotlib.pyplot as plt
-attendances_df['cumsum'] = attendances_df['Notes Requested?'].cumsum()
-#attendances_df.plot(x='Arrival Time', y='cumsum')
-
-attendances_df['Day'] = (attendances_df['Arrival Time'] / (60*24)).apply(np.floor)
-#attendances_df.groupby('Day')['Notes Requested?'].sum().plot()
-
-#requests_pop.plot(x='Time', y='All')
