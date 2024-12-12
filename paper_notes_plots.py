@@ -40,6 +40,11 @@ attendances_plots(attendances, 'All')
 population_plots(population, 'All')
 population_plots(population, 'All Prop')
 
+#Plot for All and All Prop on the same axis
+population[['Day', 'All', 'All Prop']].set_index('Day').plot(title=f'Proportion of Patients who would require paper notes for attendances',
+            xlabel='Day Number', ylabel='Proportion')
+plt.savefig('proportion still requiring notes.png', bbox_inches='tight')
+
 for spec in attendances['Specialty'].drop_duplicates().tolist():
     attendances_plots(attendances.loc[attendances['Specialty'] == spec].copy(),
                       spec)
