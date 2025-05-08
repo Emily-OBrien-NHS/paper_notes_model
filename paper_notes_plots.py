@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import os
-os.chdir('C:/Users/obriene/Projects/EPR/Paper Notes Model')
+os.chdir('C:/Users/obriene/Projects/Discrete Event Simulation/EPR Paper Notes model')
 attendances = pd.read_csv('Attendances.csv')
 population = pd.read_csv('Population.csv')
 results = pd.read_csv('Results.csv')
@@ -10,7 +10,7 @@ results = pd.read_csv('Results.csv')
 
 attendances['Day'] = (attendances['Arrival Time'] / (60*24)).apply(np.floor)
 
-os.chdir('C:/Users/obriene/Projects/EPR/Paper Notes Model/Plots')
+os.chdir('C:/Users/obriene/Projects/Discrete Event Simulation/EPR Paper Notes model/Plots')
 
 def attendances_plots(df, title):
     #Cumulative Sum of Requests
